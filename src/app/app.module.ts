@@ -22,7 +22,7 @@ import { PostService } from './services/post.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,ReactiveFormsModule,HttpModule,
-    HttpClientModule,HttpClient
+    HttpClientModule
   ],
   providers: [PostService,AuthenticationService,AuthGuard,UpdateService,ReportService, DataService],
   bootstrap: [AppComponent]
