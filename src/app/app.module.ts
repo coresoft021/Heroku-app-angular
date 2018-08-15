@@ -7,6 +7,10 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
 
+import { LoginComponent }  from  './login/login';  
+import { DashComponent }   from './dash/dash';
+import { HomeComponent } from './home/home';
+
 import { AuthGuard } from './services/auth.guard';
 import { DataService } from './services/data.service';
 import { ReportService } from './services/report.service';
@@ -16,7 +20,7 @@ import { PostService } from './services/post.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,LoginComponent,DashComponent,HomeComponent
   ],
   imports: [
     BrowserModule,
