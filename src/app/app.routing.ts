@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './services/auth.guard';
 import { DashComponent } from './dash/dash';
-import { HomeComponents } from './home/home';
+import { HomeComponent } from './home/home';
 import { LoginComponent } from './login/login';
 import { Addproduct } from './product/add_product';
 
