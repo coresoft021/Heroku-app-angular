@@ -19,12 +19,33 @@ import { ReportService } from './services/report.service';
 import { AuthenticationService } from './services/login.service';
 import { UpdateService } from './services/update.service';
 import { PostService } from './services/post.service';
+import {  
+  MatButtonModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatRadioModule,
+  MatSnackBarModule,
+  MatTableModule,
+  MatTooltipModule
+  
+} from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,LoginComponent,DashComponent,HomeComponent,Addproduct,Updateproduct
   ],
   imports: [
+  MatButtonModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatRadioModule,
+  MatSnackBarModule,
+  MatTableModule,
+  MatTooltipModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,ReactiveFormsModule,HttpModule,
