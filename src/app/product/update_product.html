@@ -1,0 +1,91 @@
+<section class="top_sec" >
+ 
+<div class="home">
+   <img src="../../assets/home.svg" style="width:25px;"/>
+<a routerLink="/dash" routerLinkActive="active">home</a>
+</div>
+
+</section> 
+
+
+<section class="bottom_sec">
+<span class="p_add_p_h">
+  <u>
+<h4>Add a New Product</h4> </u>
+</span>
+
+</section>
+
+<section class="middle_sec">
+
+<div class="container-fluid col-xs-10 col-sm-10 col-md-4 col-lg-4 col-xs-offset-1 col-sm-offset-1 col-md-offset-4 col-lg-offset-4 shadow">
+<form [formGroup]="memberForm">
+  <div class="form-group fm">
+    <label for="product_name">Name</label>
+
+    
+       <div class="input_container">
+         
+            <input ngui-auto-complete #autos  formControlName="product_name" type="text" class="form-control"   [source]="arrayOfCusValues"  
+             placeholder="Product Search"    
+              (blur)="cus_blur(autos.value)"
+              list-formatter="(PRODUCT_NAME) PRODUCT_CODE"
+              display-property-name="PRODUCT_NAME">
+            
+      </div>
+	
+
+ 
+    
+  </div>
+  <div class="form-group">
+    <label >Product Code</label>
+    <input id="product_code" formControlName="product_code" type="text" class="form-control" placeholder="Product Code">
+    <small [hidden]="memberForm.controls.product_code.valid" class="text-danger">
+                                               Product code is required.
+                                       </small>
+  </div>
+   <div class="form-group">
+    <label >Net Price</label>
+    <input id="net_price" formControlName="net_price" type="number" class="form-control" placeholder="net_price">
+     <small [hidden]="memberForm.controls.net_price.valid" class="text-danger">
+                                              Net price is required.
+                                       </small>
+  </div>
+ <div class="form-group">
+    <label>Tax</label>
+    <input id="tax" formControlName="tax" type="number" class="form-control" placeholder="tax">
+      <small [hidden]="memberForm.controls.tax.valid" class="text-danger">
+                                            Tax is required.
+                                       </small>
+  </div>
+   <div class="form-group">
+    <label>Available Quantity</label>
+    <input id="avail_qty" formControlName="avail_qty" type="number" class="form-control" placeholder="Available Quantity">
+     <small [hidden]="memberForm.controls.avail_qty.valid" class="text-danger">
+                                           Quantity is required put zero if stock is empty
+                                       </small>
+  </div>
+
+   <div class="form-group">
+    <label >Net Purchase Price</label>
+    <input id="net_purchase_price" formControlName="net_purchase_price" type="number" class="form-control" placeholder="net purchase price">
+  
+  </div>
+
+   <div class="form-group">
+    <label> Unit </label>
+     <select class="form-control" formControlName="unit" id="unit">
+                                 
+                                               <option *ngFor="let unit of units" [value]="unit">{{unit}}</option>
+                                               </select>
+     
+  </div>
+
+</form>
+
+
+
+ <button class="btn btn-primary pull-right" (click)="update_product()" type="button"><span class="glyphicon glyphicon-ok"></span> Done</button>
+</div>
+</section>
