@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
+import { NguiAutoCompleteModule } from '@ngui/auto-complete'; 
 
 import { LoginComponent }  from  './login/login';  
 import { DashComponent }   from './dash/dash';
@@ -47,7 +48,7 @@ import {
   MatTableModule,
   MatTooltipModule,
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule,NguiAutoCompleteModule,
     FormsModule,ReactiveFormsModule,HttpModule,
     HttpClientModule
   ],
