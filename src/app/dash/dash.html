@@ -1,0 +1,255 @@
+
+    <nav class="navigation">
+
+        <ul class="menu"><li><a class="active" href="#"><svg class="home" width="30px" height="30px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+         enable-background="new 0 0 512 512" xml:space="preserve"><path d="M419.492,275.815v166.213H300.725v-90.33h-89.451v90.33H92.507V275.815H50L256,69.972l206,205.844H419.492 z M394.072,88.472h-47.917v38.311l47.917,48.023V88.472z"/></svg>
+         
+         <span title="Home">Home</span></a>
+         
+         </li>
+         
+         <li>
+           
+           
+
+
+            <a href="/#/stocks_main"> 
+           
+           
+           <svg class="about" width="30px" height="30px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path d="M407.448,360.474c-59.036-13.617-113.989-25.541-87.375-75.717 c81.01-152.729,21.473-234.406-64.072-234.406c-87.231,0-145.303,84.812-64.072,234.406c27.412,50.482-29.608,62.393-87.375,75.717 c-59.012,13.609-54.473,44.723-54.473,101.176h411.838C461.919,405.196,466.458,374.083,407.448,360.474z"/></svg>
+           
+           
+           <span title="About">Stock</span></a></li> 
+           
+           
+           <li>   <a href="/#/report_main">
+             
+             
+             <svg class="work" width="30px" height="30px" version="1.1" xmlns="http://www.w3.org/2000/svg" 
+             
+             
+             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path d="M201.875,141.084h-30v-30.563c0-11.747,9.523-21.271,21.271-21.271h125.709 c11.747,0,21.271,9.523,21.271,21.271v30.563h-30v-17.063c0-3.739-3.031-6.771-6.771-6.771h-94.709 c-3.739,0-6.771,3.031-6.771,6.771V141.084z M462,161.084V422.75H50V161.084H462z M347.818,228.582l-4.721-10.858 c-44.045,27.402-67.739,48.047-103.599,88.742c-19.074-13.598-29.838-19.846-46.809-28.057l-14.509,13.412 c29.016,26.895,44.784,44.631,68.409,72.456C284.896,295.584,311.497,260.279,347.818,228.582z"/>
+             
+             
+             </svg><span title="Work">Reports</span></a></li><li>
+               
+           </li><li>
+                 
+                 
+                 <a href="/#/contact_us">
+                 
+                 
+                 <svg class="contact" width="30px" height="30px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path d="M170.544,239.052L50,146.454v213.142L170.544,239.052z M460.928,103.407H51.416l204.593,157.162L460.928,103.407z M313.355,260.696l-57.364,43.994l-57.454-44.135L50.5,408.593h410.751L313.355,260.696z M341.367,239.212L462,359.845V146.693L341.367,239.212z"/></svg><span title="Contact">Contact</span></a></li></ul>
+
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+  
+     <div class="second_card">   
+<mat-card class="com_mat">
+  <mat-card-content>
+    <h4 class="example-h2"> Add a Product </h4>
+    <button mat-fab class="add_but" (click)="add_member()">+</button>
+   
+  </mat-card-content>
+</mat-card>
+     </div>
+
+    </div>
+
+
+    <div class="col-sm-4">
+   
+                
+          <div class="second_card">
+          <mat-card class="com_mat">
+            <mat-card-content>
+              <h4 class="example-h2"> Invoice (B2B) </h4>
+            <button mat-fab class="add_but" (click)="add_reciept()">$</button>
+            
+            </mat-card-content>
+          </mat-card> 
+          </div>
+ 
+    </div>
+
+        <div class="col-sm-4">
+   
+                
+          <div class="second_card">
+          <mat-card class="com_mat">
+            <mat-card-content>
+              <h4 class="example-h2"> Invoice (B2C) </h4>
+            <button mat-fab class="add_but" (click)="b2c()">$</button>
+            
+            </mat-card-content>
+          </mat-card> 
+          </div>
+ 
+    </div>
+
+    <div class="col-sm-4">
+       
+<div class="second_card">
+<mat-card class="com_mat">
+  <mat-card-content>
+    <h4 class="example-h2"> Estimate </h4>
+ <button mat-fab class="add_but" (click)="go_estimate()">#</button>
+   
+  </mat-card-content>
+</mat-card> 
+</div>
+ 
+    </div>
+
+
+     <div class="col-sm-4">
+  
+    <div class="second_card">
+<mat-card class="com_mat">
+  <mat-card-content>
+    <h4 class="example-h2"> all- invoices(B2C) </h4>
+ <button mat-fab class="add_but" (click)="all_invo()">#</button>
+   
+  </mat-card-content>
+</mat-card> 
+</div>
+
+    </div>
+
+         <div class="col-sm-4">
+  
+    <div class="second_card">
+<mat-card class="com_mat">
+  <mat-card-content>
+    <h4 class="example-h2"> all- invoices (B2B)</h4>
+ <button mat-fab class="add_but" (click)="all_invo_b2b()">#</button>
+   
+  </mat-card-content>
+</mat-card> 
+</div>
+
+    </div>
+
+
+
+    <div class="col-sm-4">
+   
+       
+<div class="second_card">
+<mat-card class="com_mat">
+  <mat-card-content>
+       <h4 class="example-h2"> Add a new customer </h4>
+ <button mat-fab class="add_but" (click)="add_cus()">#</button>
+
+   
+  </mat-card-content>
+</mat-card> 
+</div>
+ 
+    </div>
+    <div class="col-sm-4">
+       
+<div class="second_card">
+<mat-card class="com_mat">
+  <mat-card-content>
+       <h4 class="example-h2"> Add a new Expence Category </h4>
+ <button mat-fab class="add_but" (click)="add_exp_cat()">#</button>
+
+  </mat-card-content>
+</mat-card> 
+</div>
+ 
+    </div> 
+
+       <div class="col-sm-4">
+       
+<div class="second_card">
+<mat-card class="com_mat">
+  <mat-card-content>
+       <h4 class="example-h2"> Add an Expence  </h4>
+ <button mat-fab class="add_but" (click)="add_exp_entry()">#</button>
+
+  </mat-card-content>
+</mat-card> 
+</div>
+ 
+    </div> 
+
+        <div class="col-sm-4">
+       
+<div class="second_card">
+<mat-card class="com_mat">
+  <mat-card-content>
+       <h4 class="example-h2"> List  Of Estimates </h4>
+ <button mat-fab class="add_but" (click)="estimate_list()">#</button>
+
+  </mat-card-content>
+</mat-card> 
+</div>
+ 
+    </div> 
+           <div class="col-sm-4">
+       
+<div class="second_card">
+<mat-card class="com_mat">
+  <mat-card-content>
+       <h4 class="example-h2"> Update any existing product </h4>
+ <button mat-fab class="add_but" (click)="update_product()">#</button>
+
+  </mat-card-content>
+</mat-card> 
+</div>
+ 
+    </div> 
+
+       <div class="col-sm-4">
+       
+<div class="second_card">
+<mat-card class="com_mat">
+  <mat-card-content>
+       <h4 class="example-h2"> Update any existing customer </h4>
+ <button mat-fab class="add_but" (click)="update_customer()">#</button>
+
+  </mat-card-content>
+</mat-card> 
+</div>
+ 
+    </div> 
+
+           <div class="col-sm-4">
+       
+<div class="second_card">
+<mat-card class="com_mat">
+  <mat-card-content>
+       <h4 class="example-h2"> Backup Data </h4>
+ <button mat-fab class="add_but" (click)="back_up_data()">#</button>
+
+  </mat-card-content>
+</mat-card> 
+</div>
+ 
+    </div> 
+
+    
+
+  </div>
+</div>
+
+
+
+
