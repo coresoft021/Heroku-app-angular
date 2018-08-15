@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './home.html',
   styleUrls: ['./home.css','./home.scss']
 })
-export class HomeComponents implements OnInit {
+export class HomeComponent implements OnInit {
 
 server : number = 0;
 myVar : any ;
