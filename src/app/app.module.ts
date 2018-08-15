@@ -11,6 +11,7 @@ import { LoginComponent }  from  './login/login';
 import { DashComponent }   from './dash/dash';
 import { HomeComponent } from './home/home';
 import { Addproduct } from './product/add_product';
+import { Updateproduct } from './product/update_product';
 
 import { AuthGuard } from './services/auth.guard';
 import { DataService } from './services/data.service';
@@ -21,7 +22,7 @@ import { PostService } from './services/post.service';
 
 @NgModule({
   declarations: [
-    AppComponent,LoginComponent,DashComponent,HomeComponent,Addproduct
+    AppComponent,LoginComponent,DashComponent,HomeComponent,Addproduct,Updateproduct
   ],
   imports: [
     BrowserModule,
