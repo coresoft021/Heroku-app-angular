@@ -4,7 +4,7 @@ import { FormGroup, FormControl, Validators, FormBuilder }  from '@angular/forms
 @Component({
   selector: 'app-home',
   templateUrl: './home.html',
-  styleUrls: ['./home.css','./home.scss']
+  styleUrls: ['./home.css']
 })
 export class HomeComponent implements OnInit {
    MyForm: FormGroup;
