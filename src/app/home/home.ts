@@ -1,78 +1,46 @@
-import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from '../services/login.service';
-import { Router } from '@angular/router';
+
+import { Component,OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators, FormBuilder }  from '@angular/forms';
 @Component({
   selector: 'app-home',
   templateUrl: './home.html',
   styleUrls: ['./home.css','./home.scss']
 })
 export class HomeComponent implements OnInit {
+   MyForm: FormGroup;
+   constructor( private fb: FormBuilder) {}
 
-server : number = 0;
-myVar : any ;
-     constructor(private router: Router, private ls: AuthenticationService) {
-    
-     
-    
+  
+    ngOnInit()  {
+  
+   this.MyForm = this.fb.group({
+            1: [''],
+            2: [''],
+            3:[''],
+             4: [''],
+            5: [''],
+            6:[''],
+             7: [''],
+            8: [''],
+            9:[''],
+             10: [''],
+            11: [''],
+            12:[''],
+             13:[''],
+             14: [''],
+            15: [''],
+            16:[''],
+             17: [''],
+            18: [''],
+            19:[''],
+             20: [''],
+            21: ['']
+            
+                     });
+
   }
-  
-
-  ngOnInit() {
-
-   this.check_server();
+  clear()
+  {
+    this.MyForm.reset();
   }
-
-
-
-check_server()
-{
-  
- this.myVar = setInterval(() => {   
-
-   if( this.server === 0)
-  { 
-
-    this.ls.server_status().subscribe((jsonData) => { this.getval2(jsonData)
-                      },(err) => console.error(err),
-                      
-                      );
-   }
-
-  else
-      {
-
-             clearInterval(this.myVar);
-      }
-        
-  
-}, 2000);
-
-
-
-  
-  
-
-  
-}
-
- 
-
-getval2(s: any)
-{
-
-   
-
-   if (s.msg === 'server running')
-   {
-       this.server = 1 ;    
-       this.router.navigate(['/login']);
-                     
-   }        
-              else {
-                    this.router.navigate(['/']);
-                    
-
-                   }
-                   s.msg = 'waiting';
-}
 }
