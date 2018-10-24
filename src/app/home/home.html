@@ -1,11 +1,161 @@
-<div class="loading">
-	<div class="loading-text">
-		<span class="loading-text-words">L</span>
-		<span class="loading-text-words">O</span>
-		<span class="loading-text-words">A</span>
-		<span class="loading-text-words">D</span>
-		<span class="loading-text-words">I</span>
-		<span class="loading-text-words">N</span>
-		<span class="loading-text-words">G</span>
-	</div>
-</div> 
+
+   
+
+     <div style="margin-left:40%;display:inline-block;width:100%;height:20px;">
+    
+    </div>
+      <form  [formGroup]="MyForm">
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      
+      <input type="email" class="form-control" formControlName="1"  placeholder="IP Address">
+    </div>
+     <div class="form-group col-md-2">
+      
+      <label> Click left press f8 then type </label>
+    </div>
+
+
+    <div class="form-group col-md-4">
+      
+      <input type="text" class="form-control"  formControlName="2"  placeholder="First Name">
+    </div>
+        <div class="form-group col-md-4">
+      
+      <input type="text" class="form-control"  formControlName="3" placeholder="Last Name">
+    </div>
+  </div>
+  <div class="form-row">
+  <div class="form-group col-md-6">
+    
+    <input type="text" class="form-control"  formControlName="4" placeholder="Address">
+  </div>
+   <div class="form-group col-md-4">
+    
+    <input type="text" class="form-control"  formControlName="5" placeholder="City">
+  </div>
+     <div class="form-group col-md-2">
+    
+    <input type="text" class="form-control"  formControlName="6" placeholder="State">
+  </div>
+
+  </div>
+
+    <div class="form-row">
+  <div class="form-group col-md-3">
+    
+    <input type="text" class="form-control"  formControlName="7"  placeholder="Zip Code">
+  </div>
+
+    <div class="form-group col-md-1">
+    
+    
+    </div>
+
+   <div class="form-group col-md-4">
+    
+    <input type="number" class="form-control"  formControlName="8" placeholder="Home Phone">
+  </div>
+     <div class="form-group col-md-4">
+    
+    <input type="number" class="form-control"  formControlName="9" placeholder="Work Phone">
+  </div>
+
+  </div>
+
+     <div class="form-row">
+  <div class="form-group col-md-4">
+    
+    <input type="email" class="form-control"  formControlName="10" placeholder="Email">
+  </div>
+
+  
+
+   <div class="form-group col-md-2">
+    
+    <input type="text" class="form-control"  formControlName="11" placeholder="Date Of Birth">
+  </div>
+     <div class="form-group col-md-2">
+    
+    <input type="number" class="form-control"  formControlName="12" placeholder="SSN">
+  </div>
+     <div class="form-group col-md-3">
+        <input type="text" class="form-control"  formControlName="13" placeholder="Driving Licence No">
+  </div>
+    <div class="form-group col-md-1">
+        <input type="text" class="form-control"  formControlName="14" placeholder="D L State">
+  </div>
+
+  </div>
+
+
+      <div class="form-row">
+  <div class="form-group col-md-3">
+    
+    <input type="number" class="form-control"  formControlName="15" placeholder="Bank ABA">
+  </div>
+
+  
+
+   <div class="form-group col-md-3">
+    
+    <input type="number" class="form-control"  formControlName="16"  placeholder="Bank Account No">
+  </div>
+     <div class="form-group col-md-2">
+    
+    <input type="text" class="form-control"  formControlName="17"  placeholder="Name Of Bank">
+  </div>
+     <div class="form-group col-md-3">
+        <input type="text" class="form-control"  formControlName="18" placeholder="Employer">
+  </div>
+    <div class="form-group col-md-1">
+     
+  </div>
+
+  </div>
+
+     <div class="form-row">
+  <div class="form-group col-md-2">
+    
+    <input type="text" class="form-control"  formControlName="19" placeholder="Date Of Hired">
+  </div>
+
+  
+
+   <div class="form-group col-md-3">
+    
+    <input type="text" class="form-control"  formControlName="20" placeholder="Supervisor Name">
+  </div>
+     <div class="form-group col-md-3">
+    
+    <input type="number" class="form-control"  formControlName="21" placeholder="Supervisor Phone">
+  </div>
+   <div class="form-group col-md-2">
+    Tab and press f8
+   </div> 
+ 
+    <div class="form-group col-md-1">
+     
+  <button type="submit" class="btn btn-primary">Save</button>
+  </div>
+     <div class="form-group col-md-1">
+     
+  <button type="submit" (click)="clear()" class="btn btn-primary">Reset</button>
+  </div>
+  </div>
+
+
+
+
+
+ 
+</form>
+
+
+   
+ 
+
+
+
+
+  
