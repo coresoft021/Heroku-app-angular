@@ -36,7 +36,6 @@
     "rxjs-compat": "6.4.0",
     "web-animations-js": "2.3.1",
     "zone.js": "0.8.29",
-    "typescript": "~2.7.2",     
     "express": "^4.16.3",
     "path": "^0.12.7"
 
