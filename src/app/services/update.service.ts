@@ -14,6 +14,7 @@ export class UpdateService {
   
     invo_number : number = 0;
     invo_number_b2b : number = 0;
+    exp_no : number = 0;
     cus_id : number = 0 ;
     invo_date : string;
     Amount_payed : number ;
@@ -25,13 +26,14 @@ export class UpdateService {
     fig_main : string;
     fig_sub : string;
     is_cash_pay : boolean = true;
+    is_b2b : boolean = true;
     
     constructor(private http: Http) { }
 
  backup()
  {
 
-   return this.http.get('http://localhost:8080/api/user/backup',{headers : contentHeaders})  
+   return this.http.get('http://localhost:8081/api/user/backup',{headers : contentHeaders})  
       .map((res: Response) => res.json())
  }
 
@@ -43,16 +45,29 @@ export class UpdateService {
        
              console.log('body',body);
         
-        return this.http.post('http://localhost:8080/api/public/delete_invoice', body, { headers: contentHeaders})
+        return this.http.post('http://localhost:8081/api/public/delete_invoice', body, { headers: contentHeaders})
             .map((res: Response) => res.json())
             
     } 
     
+delete_invo_b2b(model:any) {
+
+        let body= JSON.stringify(model); 
+       
+       
+             console.log('body',body);
+        
+        return this.http.post('http://localhost:8081/api/public/delete_invoice_b2b', body, { headers: contentHeaders})
+            .map((res: Response) => res.json())
+            
+    } 
+    
+
  get_a_invoice(model:any)
   {
       let body= JSON.stringify(model); 
        console.log('body',body);
-      return this.http.post('http://localhost:8080/api/public/get_a_invoice',body,{headers : contentHeaders})  
+      return this.http.post('http://localhost:8081/api/public/get_a_invoice',body,{headers : contentHeaders})  
       .map((res: Response) => res.json())
    
   }
@@ -60,7 +75,7 @@ get_a_invoice_b2b(model:any)
 {
    let body= JSON.stringify(model); 
        console.log('body',body);
-      return this.http.post('http://localhost:8080/api/public/get_a_invoice_b2b',body,{headers : contentHeaders})  
+      return this.http.post('http://localhost:8081/api/public/get_a_invoice_b2b',body,{headers : contentHeaders})  
       .map((res: Response) => res.json())
 
 }
@@ -77,12 +92,18 @@ get_a_invoice_b2b(model:any)
       return this.invo_number_b2b;
  
     }
+    list_stocks()
+    {
+      return this.http.get('http://localhost:8081/api/public/stock_list',{ headers: contentHeaders})
+            .map((res: Response) => res.json())
+
+    }
 
     update_invoice(model:any) {
 
         let body= JSON.stringify(model); 
            console.log('body',body);
-            return this.http.post('http://localhost:8080/api/public/update_invoice', body, { headers: contentHeaders})
+            return this.http.post('http://localhost:8081/api/public/update_invoice_b2b_new', body, { headers: contentHeaders})
             .map((res: Response) => res.json())
             
     } 
@@ -90,7 +111,7 @@ update_stock(model:any) {
 
         let body= JSON.stringify(model); 
              console.log('body',body);
-              return this.http.post('http://localhost:8080/api/public/update_stock', body, { headers: contentHeaders})
+              return this.http.post('http://localhost:8081/api/public/update_stock', body, { headers: contentHeaders})
               .map((res: Response) => res.json())
             
     } 
@@ -100,7 +121,7 @@ update_stock(model:any) {
 
         let body= JSON.stringify(model); 
              console.log('body',body);
-              return this.http.post('http://localhost:8080/api/public/get_avail_qty', body, { headers: contentHeaders})
+              return this.http.post('http://localhost:8081/api/public/get_avail_qty', body, { headers: contentHeaders})
               .map((res: Response) => res.json())
   }
 
