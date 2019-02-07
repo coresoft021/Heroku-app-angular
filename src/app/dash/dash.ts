@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthGuard } from '../services/auth.guard';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import { UpdateService } from '../services/update.service';
+
 @Component({
   selector: 'app-dash',
   templateUrl: './dash.html',
@@ -14,17 +14,9 @@ export class DashComponent  {
  ngOnInit() {
    
   }
-  constructor(private ag : AuthGuard,private _formBuilder: FormBuilder,private router: Router, private us : UpdateService ) { }
+  constructor(private ag : AuthGuard,private _formBuilder: FormBuilder,private router: Router ) { }
   
-  back_up_data()
-  {
-   this.us.backup()
-  .subscribe((jsonData) => { this.getval3(jsonData)  
-                      },(err) => console.error(err)
-                      
-                      );
-
-  }
+ 
   getval3(x:any)
   {
 
@@ -58,9 +50,20 @@ export class DashComponent  {
        this.router.navigate(['/add_product']);
 
     }
+
+    add_party()
+    {
+      this.router.navigate(['/add_party']);
+    }
   add_reciept()
   {
    this.router.navigate(['/invoice_reciept']);
+
+  }
+  exp_detail_entry()
+  {
+
+     this.router.navigate(['/exp_det']);
 
   }
  go_report()
@@ -118,5 +121,17 @@ all_invo_b2b()
 {
   this.router.navigate(['/b2b-all-invo']);
 }
+
+cash_recieve()
+{
+  
+  this.router.navigate(['/cash-recieve']);
+  
+}
+customer_statement()
+{
+  this.router.navigate(['/customer-statement']);
+}
+
 
 }
