@@ -2,17 +2,22 @@
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
 import { AuthGuard } from './services/auth.guard';
 import { DashComponent } from './dash/dash';
-import { HomeComponent } from './home/home';
+import { HomeComponents } from './home/home';
 import { LoginComponent } from './login/login';
-import { Addproduct } from './product/add_product';
+import { Bill_b2b } from './bill/b2b/main';
+
 
 const routes: Routes = [
-    { path: '', component: HomeComponent },
+    { path: '', component: HomeComponents },
     { path: 'login',component: LoginComponent },
-    { path: 'dash', component: DashComponent ,canActivate: [AuthGuard] },
-    { path: 'add_product', component : Addproduct , canActivate : [AuthGuard]},
+    { path: 'dash', component: DashComponent,canActivate:[AuthGuard] },
+    { path: 'b2b', component: Bill_b2b,canActivate:[AuthGuard] },
+    
+    
+
     
 ];
 
