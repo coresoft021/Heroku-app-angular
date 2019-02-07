@@ -22,7 +22,7 @@ export class AuthenticationService {
         this.names= user;
              
         
-        return this.http.post('http://localhost:8080/api/user/login_check', body, { headers: contentHeaders})
+        return this.http.post('https://coresoft.herokuapp.com/api/login/login_check', body, { headers: contentHeaders})
             .map((res: Response) => res.json())
             
             
@@ -34,7 +34,7 @@ export class AuthenticationService {
     
     
     
-      return this.http.post('http://localhost:8080/api/user/server_check',{headers : contentHeaders})  
+      return this.http.post('https://coresoft.herokuapp.com/api/login/server_check',{headers : contentHeaders})  
       .map((res: Response) => res.json())
  
     
@@ -53,7 +53,7 @@ export class AuthenticationService {
         let body= JSON.stringify(model); 
 
         
-        return this.http.post('http://localhost:8080/api/public/add_user', body, { headers: contentHeaders})
+        return this.http.post('http://localhost:8081/api/public/add_user', body, { headers: contentHeaders})
             .map((response: Response) => {
                 
                 
